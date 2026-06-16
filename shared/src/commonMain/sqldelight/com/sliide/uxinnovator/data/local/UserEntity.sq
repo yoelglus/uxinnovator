@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS UserEntity (
+    id INTEGER NOT NULL PRIMARY KEY,
+    name TEXT NOT NULL,
+    email TEXT NOT NULL,
+    status TEXT NOT NULL,
+    fetchedAt TEXT NOT NULL
+);
+
+getAllUsers:
+SELECT * FROM UserEntity ORDER BY id DESC;
+
+insertUser:
+INSERT OR REPLACE INTO UserEntity(id, name, email, status, fetchedAt)
+VALUES (?, ?, ?, ?, ?);
+
+deleteUser:
+DELETE FROM UserEntity WHERE id = ?;
+
+deleteAllUsers:
+DELETE FROM UserEntity;
+
+getUserById:
+SELECT * FROM UserEntity WHERE id = ?;
