@@ -26,3 +26,6 @@ Config.kt.local
 
 # Claude Code internal docs/settings — not for the public repo
 .claude/
+
+# Machine-specific Xcode env (e.g. JAVA_HOME)
+iosApp/.xcode.env.local
